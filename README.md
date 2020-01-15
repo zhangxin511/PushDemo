@@ -1,27 +1,9 @@
 # PushDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12. It is a demo project designed for [technical article](https://medium.com/kabbage-engineering/angular-pwa-app-notification-using-firebase-cloud-messaging-d1b7bd171b98). Please read and follow that article to see how to play with demo
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Run PWA locally
+1. Please update the content of [environment.prod.ts](src/environments/environment.prod.ts) to your own firebase setting
+2. Install `http-server-spa` globally: `npm install -g http-server-spa@1.3.0`, you will only need to run this once.
+3. Build production module with source map:`ng build --prod --source-map`
+4. Serve your application using `http-server-spa dist/PushDemo/ index.html 18080` (I used 18080 port, you can use any free port you are using), visit http://localhost:18080/.
